@@ -18,6 +18,7 @@ public class MyHelper extends SQLiteOpenHelper {
     //第一次執行這個程式時會自己新增資料庫如下
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
+        //先把""加好,在copy sql語法近來, 系統會自動加反斜線
         sqLiteDatabase.execSQL("CREATE TABLE \"students\" ( `_id` INTEGER, `name` TEXT, `score` INTEGER, PRIMARY KEY(`_id`) )");
     }
 
